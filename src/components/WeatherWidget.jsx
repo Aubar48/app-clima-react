@@ -87,7 +87,7 @@ const WeatherWidget = () => {
   }, []);
 
   return (
-    <div className="min-h-screen flex flex-col items-center p-4 bg-gradient-to-br from-[#3a3897] via-[#2c2a72] to-[#1a1a4e] font-[Outfit]">
+    <div className=" flex flex-col items-center p-4 ">
       
       {/* Input de búsqueda */}
       <div className="flex gap-2 mb-4">

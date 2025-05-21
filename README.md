@@ -1,12 +1,55 @@
-# React + Vite
+# WeatherWidget 🌦️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Una aplicación moderna construida con **React** que permite visualizar el clima actual de cualquier ciudad del mundo en tiempo real, utilizando la API de **OpenWeatherMap**. El diseño es responsivo y atractivo, con animaciones y detalles visuales inspirados en aplicaciones móviles actuales.
 
-Currently, two official plugins are available:
+## 📷 Captura de pantalla
+<figure><img src="./public/app-clima.png" alt="logo" style="height: 400px;"></figure>
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Características
+
+- 🔍 **Búsqueda por ciudad**: permite consultar el clima de cualquier ciudad ingresada.
+- 📍 **Selección en mapa (en desarrollo)**: planeado para elegir ubicaciones directamente desde un mapa interactivo.
+- 📆 **Información detallada**:
+  - Temperatura actual en °C
+  - Humedad y velocidad del viento
+  - Horas de amanecer y atardecer
+  - Duración del día
+- 📅 **Pronóstico extendido (estático por ahora)** para los próximos días.
+- 🌈 **Estética moderna** con degradados, sombras suaves, y soporte para dispositivos móviles.
+
+## 🚀 Tecnologías
+
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [OpenWeatherMap API](https://openweathermap.org/api)
+
+## 🧑‍💻 Instalación
+
+1. **Clona este repositorio**:
+
+   ```bash
+#### clona el projecto
+- git clone https://github.com/tu-usuario/weather-widget.git
+#### moverte por consola al projecto
+- cd weather-widget
+#### instalar dependencias
+- npm install
+#### agregar tu propia api key o usar la que esta por defecto que esta en el componente WeatherWidget.
+- const API_KEY = "TU_API_KEY_AQUI";
+#### iniciar app
+- npm run dev
+- Abre en el navegador: http://localhost:5173
+
+## 🗺️ Próximas mejoras
+- 🧭 Búsqueda geográfica con mapa interactivo (leaflet o Mapbox).
+
+- 📊 Pronóstico real para próximos días usando /forecast de OpenWeatherMap.
+
+- 🌐 Soporte para ubicación automática por geolocalización.
+
+- 🌓 Modo oscuro/oscuro automático por hora del día.
+
+
+
