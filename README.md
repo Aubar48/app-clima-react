@@ -31,7 +31,7 @@ Una aplicación moderna construida con **React** que permite visualizar el clima
 
    ```bash
 #### clona el projecto
-- git clone https://github.com/tu-usuario/weather-widget.git
+- git clone https://github.com/Aubar48/app-clima-react
 #### moverte por consola al projecto
 - cd weather-widget
 #### instalar dependencias
