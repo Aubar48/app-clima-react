@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 
-const API_KEY = "6dd4b35b009900090c6ae6a063297fb1";
+const API_KEY = "fbed159456078512625fc3667e773801";
 
-const WeatherWidget = () => {
+const WeatherWidget = ({ setCoords }) => {
   const [weather, setWeather] = useState(null);
   const [error, setError] = useState(null);
   const [city, setCity] = useState("Córdoba,AR"); // valor inicial
@@ -22,6 +22,9 @@ const WeatherWidget = () => {
 
       setWeather(data);
       setError(null);
+      if (setCoords) {
+        setCoords({ lat: data.coord.lat, lon: data.coord.lon });
+      }
     } catch (err) {
       console.error("Error al obtener el clima:", err);
       setError(err.message);
@@ -45,6 +48,9 @@ const WeatherWidget = () => {
 
       setWeather(data);
       setError(null);
+      if (setCoords) {
+        setCoords({ lat: data.coord.lat, lon: data.coord.lon });
+      }
     } catch (err) {
       setError(err.message);
       setWeather(null);
@@ -88,7 +94,6 @@ const WeatherWidget = () => {
 
   return (
     <div className=" flex flex-col items-center p-4 ">
-      
       {/* Input de búsqueda */}
       <div className="flex gap-2 mb-4">
         <input
@@ -108,7 +113,7 @@ const WeatherWidget = () => {
           onClick={handleGeolocation}
           className="bg-indigo-500 text-white px-4 py-2 rounded-lg hover:bg-indigo-600 transition"
         >
-          📍 Actual
+          Actual
         </button>
       </div>
 
@@ -163,7 +168,7 @@ const WeatherWidget = () => {
               <div>Viento: {Math.round(weather.wind.speed * 3.6)} km/h</div>
             </div>
 
-            {/* Pronóstico Estático */}
+            {/* Pronóstico Estático 
             <div className="flex justify-between gap-2">
               {[{ day: "Hoy", icon: "⛅", max: 28, min: 19 },
                 { day: "Vie", icon: "🌧️", max: 25, min: 18 },
@@ -182,7 +187,7 @@ const WeatherWidget = () => {
                   <div className="text-xs opacity-70">{f.min}°</div>
                 </div>
               ))}
-            </div>
+            </div>*/}
           </div>
         </div>
       )}
