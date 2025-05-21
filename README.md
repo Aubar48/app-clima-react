@@ -3,7 +3,7 @@
 Una aplicación moderna construida con **React** que permite visualizar el clima actual de cualquier ciudad del mundo en tiempo real, utilizando la API de **OpenWeatherMap**. El diseño es responsivo y atractivo, con animaciones y detalles visuales inspirados en aplicaciones móviles actuales.
 
 ## 📷 Captura de pantalla
-<figure><img src="./public/app-clima.png" alt="logo" style="height: 400px;"></figure>
+<picture><img src="./public/app-clima.png" alt="logo" style="height: 250px;"></picture>
 
 
 
@@ -41,6 +41,7 @@ Una aplicación moderna construida con **React** que permite visualizar el clima
 #### iniciar app
 - npm run dev
 - Abre en el navegador: http://localhost:5173
+- Ver online: https://appclimanahuel.netlify.app/
 
 ## 🗺️ Próximas mejoras
 - 🧭 Búsqueda geográfica con mapa interactivo (leaflet o Mapbox).
