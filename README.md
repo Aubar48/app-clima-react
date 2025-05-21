@@ -27,10 +27,7 @@ Una aplicación moderna construida con **React** que permite visualizar el clima
 
 ## 🧑‍💻 Instalación
 
-1. **Clona este repositorio**:
-
-   ```bash
-#### clona el projecto
+#### clona el repositorio
 - git clone https://github.com/Aubar48/app-clima-react
 #### moverte por consola al projecto
 - cd weather-widget
@@ -40,7 +37,7 @@ Una aplicación moderna construida con **React** que permite visualizar el clima
 - const API_KEY = "TU_API_KEY_AQUI";
 #### iniciar app
 - npm run dev
-- Abre en el navegador: http://localhost:5173
+- Abre en el navegador de forma local: http://localhost:5173
 - Ver online: https://appclimanahuel.netlify.app/
 
 ## 🗺️ Próximas mejoras
