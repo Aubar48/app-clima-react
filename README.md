@@ -5,12 +5,10 @@ Una aplicación moderna construida con **React** que permite visualizar el clima
 ## 📷 Captura de pantalla
 <picture><img src="./public/app-clima.png" alt="logo" style="height: 250px;"></picture>
 
-
-
 ## ✨ Características
 
 - 🔍 **Búsqueda por ciudad**: permite consultar el clima de cualquier ciudad ingresada.
-- 📍 **Selección en mapa (en desarrollo)**: planeado para elegir ubicaciones directamente desde un mapa interactivo.
+- 📍 **Selección en mapa (en desarrollo)**: planeado para elegir ubicaciones directamente desde un mapa interactivo (proximamente).
 - 📆 **Información detallada**:
   - Temperatura actual en °C
   - Humedad y velocidad del viento
@@ -22,6 +20,7 @@ Una aplicación moderna construida con **React** que permite visualizar el clima
 ## 🚀 Tecnologías
 
 - [React](https://reactjs.org/)
+- [ReacRouterDoom](https://www.npmjs.com/package/react-router-dom)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [OpenWeatherMap API](https://openweathermap.org/api)
 
@@ -30,11 +29,11 @@ Una aplicación moderna construida con **React** que permite visualizar el clima
 #### clona el repositorio
 - git clone https://github.com/Aubar48/app-clima-react
 #### moverte por consola al projecto
-- cd weather-widget
+- cd app-clima-react-master
 #### instalar dependencias
 - npm install
-#### agregar tu propia api key o usar la que esta por defecto que esta en el componente WeatherWidget.
-- const API_KEY = "TU_API_KEY_AQUI";
+#### agregar tu propia api key en el archivo .env tenes el ejemplo del archivo .env.example
+- VITE_OPENWEATHER_API_KEY=
 #### iniciar app
 - npm run dev
 - Abre en el navegador de forma local: http://localhost:5173
@@ -42,12 +41,6 @@ Una aplicación moderna construida con **React** que permite visualizar el clima
 
 ## 🗺️ Próximas mejoras
 - 🧭 Búsqueda geográfica con mapa interactivo (leaflet o Mapbox).
-
-- 📊 Pronóstico real para próximos días usando /forecast de OpenWeatherMap.
-
-- 🌐 Soporte para ubicación automática por geolocalización.
-
-- 🌓 Modo oscuro/oscuro automático por hora del día.
 
 
 
