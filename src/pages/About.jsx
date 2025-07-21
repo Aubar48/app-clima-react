@@ -20,8 +20,15 @@ export default function About() {
           setMenuOpen={setMenuOpen}
         />
 
-        <main className="flex-grow max-w-7xl mx-auto p-6">
-          <h2 className="text-3xl font-bold mb-6">Sobre Nosotros</h2>
+        <main
+          className="flex-grow max-w-7xl mx-auto p-6"
+          role="main"
+          aria-labelledby="main-heading"
+        >
+          <h1 id="main-heading" className="text-3xl font-bold mb-6">
+            Sobre Nosotros
+          </h1>
+
           <p className="mb-8 max-w-3xl">
             Somos estudiantes del <strong>ISPC</strong> cursando la materia{" "}
             <strong>Estadística y Probabilidad Aplicadas</strong> en el ciclo
@@ -30,57 +37,55 @@ export default function About() {
             meteorológica confiable para la toma de decisiones cotidianas.
           </p>
 
-          <h2 className="text-2xl font-semibold mb-4">Foro 1: Miembros</h2>
-          <section className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
-            {teamMembers.map(({ name, photo, portfolio, github, linkedin }) => (
-              <div
-                key={name}
-                className="bg-white dark:bg-gray-800 rounded-lg shadow p-4 flex flex-col items-center"
-              >
-                <img
-                  src={photo}
-                  alt={`Foto de ${name}`}
-                  className="w-32 h-32 rounded-full mb-4 object-cover"
-                />
-                <h3 className="text-xl font-semibold mb-2">{name}</h3>
-                <div className="flex gap-4 text-sm">
-                  {portfolio && (
-                    <a
-                      href={portfolio}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="underline hover:text-yellow-400"
-                    >
-                      Portfolio
-                    </a>
-                  )}
-                  {github && (
-                    <a
-                      href={github}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="underline hover:text-yellow-400"
-                    >
-                      GitHub
-                    </a>
-                  )}
-                  {linkedin && (
-                    <a
-                      href={linkedin}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="underline hover:text-yellow-400"
-                    >
-                      LinkedIn
-                    </a>
-                  )}
-                </div>
-              </div>
-            ))}
+          <section aria-labelledby="team-heading">
+            <h2 id="team-heading" className="text-2xl font-semibold mb-4">
+              Foro 1: Miembros
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-6">
+              {teamMembers.map(({ name, photo, portfolio, github, linkedin }) => (
+                <article
+                  key={name}
+                  className="bg-white dark:bg-gray-800 rounded-lg shadow p-4 flex flex-col items-center"
+                  aria-label={`Perfil de ${name}`}
+                >
+                  <img
+                    src={photo}
+                    alt={`Foto de perfil de ${name}`}
+                    className="w-32 h-32 rounded-full mb-4 object-cover"
+                  />
+                  <h3 className="text-xl font-semibold mb-2">{name}</h3>
+                  <nav aria-label={`Enlaces de ${name}`}>
+                    <ul className="flex gap-4 text-sm underline hover:text-yellow-400">
+                      {portfolio && (
+                        <li>
+                          <a href={portfolio} target="_blank" rel="noreferrer">
+                            Ver portfolio
+                          </a>
+                        </li>
+                      )}
+                      {github && (
+                        <li>
+                          <a href={github} target="_blank" rel="noreferrer">
+                            GitHub
+                          </a>
+                        </li>
+                      )}
+                      {linkedin && (
+                        <li>
+                          <a href={linkedin} target="_blank" rel="noreferrer">
+                            LinkedIn
+                          </a>
+                        </li>
+                      )}
+                    </ul>
+                  </nav>
+                </article>
+              ))}
+            </div>
           </section>
 
-          <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">
+          <section className="my-10" aria-labelledby="problematic-heading">
+            <h2 id="problematic-heading" className="text-2xl font-semibold mb-4">
               Foro 2: Problemáticas
             </h2>
             <p>
@@ -91,8 +96,10 @@ export default function About() {
             </p>
           </section>
 
-          <section className="mb-10">
-            <h2 className="text-2xl font-semibold mb-4">Foro 3: Acciones</h2>
+          <section className="mb-10" aria-labelledby="actions-heading">
+            <h2 id="actions-heading" className="text-2xl font-semibold mb-4">
+              Foro 3: Acciones
+            </h2>
             <ul className="list-disc list-inside space-y-2">
               <li>
                 <strong>1.</strong> Recopilar datos climáticos de fuentes
@@ -116,15 +123,28 @@ export default function About() {
               </li>
             </ul>
 
-            <div className="mt-6">
+            <div className="mt-6 overflow-x-auto">
               <h3 className="text-xl font-medium mb-2">
                 Selección de acciones
               </h3>
-              <table className="w-full border border-gray-300 dark:border-gray-700 text-sm">
+              <table
+                className="w-full border border-gray-300 dark:border-gray-700 text-sm"
+                aria-label="Tabla de objetivos y acciones"
+              >
                 <thead className="bg-gray-100 dark:bg-gray-800">
                   <tr>
-                    <th className="border px-2 py-1">Objetivo específico</th>
-                    <th className="border px-2 py-1">Acciones</th>
+                    <th
+                      scope="col"
+                      className="border px-2 py-1 text-left font-semibold"
+                    >
+                      Objetivo específico
+                    </th>
+                    <th
+                      scope="col"
+                      className="border px-2 py-1 text-left font-semibold"
+                    >
+                      Acciones
+                    </th>
                   </tr>
                 </thead>
                 <tbody>

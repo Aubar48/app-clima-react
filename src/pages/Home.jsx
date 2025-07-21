@@ -7,7 +7,6 @@ import Footer from "../components/Footer";
 import { useDarkModeMenu } from "../hooks/useDarkModeMenu";
 
 const Home = () => {
-  // Usamos el hook personalizado para modo oscuro y menú (aunque acá menú no se usa, lo dejamos)
   const { darkMode, toggleDarkMode, menuOpen, toggleMenu, setMenuOpen } =
     useDarkModeMenu();
 
@@ -23,25 +22,31 @@ const Home = () => {
   return (
     <div className={darkMode ? "dark" : ""}>
       <div className="font-[Outfit] bg-gradient-to-br from-[#3a3897] via-[#2c2a72] to-[#1a1a4e] dark:from-[#0f0f2f] dark:via-[#1a1a4e] dark:to-[#0d0d25] text-white dark:text-gray-200 min-h-screen transition-colors duration-300">
+
         {showScrollTop && (
           <button
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-            className="fixed bottom-6 right-6 z-50 bg-yellow-400 text-black p-3 rounded-full shadow-lg hover:bg-yellow-300 transition dark:text-white dark:bg-yellow-500 dark:hover:bg-yellow-400"
-            aria-label="Scroll to top"
+            className="fixed bottom-6 right-6 z-50 bg-yellow-400 text-black p-3 rounded-full shadow-lg hover:bg-yellow-300 transition dark:text-white dark:bg-yellow-500 dark:hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
+            aria-label="Desplazar hacia arriba"
           >
             ⬆️
           </button>
         )}
 
-        <Header
-          darkMode={darkMode}
-          toggleDarkMode={toggleDarkMode}
-          menuOpen={menuOpen}
-          toggleMenu={toggleMenu}
-          setMenuOpen={setMenuOpen}
-        />
+        {/* Header semántico */}
+        <header>
+          <Header
+            darkMode={darkMode}
+            toggleDarkMode={toggleDarkMode}
+            menuOpen={menuOpen}
+            toggleMenu={toggleMenu}
+            setMenuOpen={setMenuOpen}
+          />
+        </header>
 
-        <main className="max-w-7xl mx-auto px-6 py-12 flex flex-col gap-16">
+        {/* Main semántico */}
+        <main id="main" className="max-w-7xl mx-auto px-6 py-12 flex flex-col gap-16">
+
           {/* Hero / Intro */}
           <section
             id="hero"
@@ -58,7 +63,7 @@ const Home = () => {
               </p>
               <a
                 href="#widget"
-                className="inline-block bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full shadow hover:bg-yellow-300 transition dark:text-white dark:bg-yellow-500 dark:hover:bg-yellow-400"
+                className="inline-block bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full shadow hover:bg-yellow-300 transition dark:text-white dark:bg-yellow-500 dark:hover:bg-yellow-400 focus:outline-none focus:ring-2 focus:ring-yellow-400"
               >
                 Probar ahora
               </a>
@@ -129,7 +134,10 @@ const Home = () => {
           </section>
         </main>
 
-        <Footer />
+        {/* Footer semántico */}
+        <footer>
+          <Footer />
+        </footer>
       </div>
     </div>
   );
