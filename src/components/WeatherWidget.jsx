@@ -4,6 +4,7 @@ import { getWeatherMessage } from "../utils/weatherMessages";
 import { getWeatherEmoji } from "../utils/getWeatherEmoji";
 import { getWeatherRecommendation } from "../utils/getWeatherRecommendation";
 import { getWeatherPlaylist } from "../utils/getWeatherPlaylist";
+import { WeatherMusicPlayer } from "../components/WeatherMusicPlayer";
 
 const WeatherWidget = ({ setCoords }) => {
   const {
@@ -59,11 +60,18 @@ const WeatherWidget = ({ setCoords }) => {
         </button>
       </div>
 
-      {error && <div className="text-red-400 mb-4 text-center w-full">{error}</div>}
-      {loading && <div className="text-white mb-4 text-center w-full">Cargando clima...</div>}
+      {error && (
+        <div className="text-red-400 mb-4 text-center w-full">{error}</div>
+      )}
+      {loading && (
+        <div className="text-white mb-4 text-center w-full">
+          Cargando clima...
+        </div>
+      )}
 
       {!loading && weather && (
-        <div className="relative w-full rounded-3xl p-6 overflow-hidden border border-white/10 shadow-2xl
+        <div
+          className="relative w-full rounded-3xl p-6 overflow-hidden border border-white/10 shadow-2xl
           bg-gradient-to-br from-purple-700/70 via-indigo-800/60 to-blue-900/70 backdrop-blur-lg
           max-w-md mx-auto"
         >
@@ -111,6 +119,9 @@ const WeatherWidget = ({ setCoords }) => {
             <p>{message}</p>
             <p className="text-white/80">{recommendation}</p>
             <p className="text-white/60">🎵 {playlist}</p>
+            <div className="mt-2">
+              <WeatherMusicPlayer weatherDescription={weather.weather[0].description} />
+            </div>
           </div>
         </div>
       )}
