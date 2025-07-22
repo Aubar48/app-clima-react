@@ -42,8 +42,12 @@ const WeatherWidget = ({ setCoords }) => {
         <input
           type="text"
           value={city}
+          id="city"
+          name="city"
+          autoComplete="city"
           onChange={(e) => setCity(e.target.value)}
-          placeholder="Ej: Santiago,CL"
+          placeholder="Ej: Córdoba,Ar"
+          required
           className="flex-grow min-w-[180px] px-4 py-2 rounded-lg outline-none border border-white/20 text-sm bg-white/10 text-white placeholder-white/50"
         />
         <button
@@ -84,8 +88,8 @@ const WeatherWidget = ({ setCoords }) => {
           </div>
 
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-center mb-3 gap-2 sm:gap-4">
-            <div className="text-5xl">{emoji}</div>
-            <div className="text-5xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-300">
+            <div className="text-5xl text-center">{emoji}</div>
+            <div className="text-5xl text-center font-semibold bg-clip-text text-transparent bg-gradient-to-r from-white to-slate-300">
               {Math.round(weather.main.temp)}°C
             </div>
           </div>

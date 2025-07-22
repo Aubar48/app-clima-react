@@ -43,7 +43,7 @@ export default function Header({
               onChange={toggleDarkMode}
               aria-label="Alternar modo oscuro"
             />
-            <span className="slider">
+            <span className="slider aria-hidden:true">
               <span className="icon sun">☀️</span>
               <span className="icon moon">🌙</span>
             </span>
@@ -68,7 +68,7 @@ export default function Header({
         >
           <button
             onClick={toggleDarkMode}
-            className="px-4 py-2 rounded-full font-semibold bg-white text-black hover:bg-gray-200 dark:bg-black dark:text-white dark:hover:bg-gray-800 transition"
+            className="aria-hidden:true px-4 py-2 rounded-full font-semibold bg-white text-black hover:bg-gray-200 dark:bg-black dark:text-white dark:hover:bg-gray-800 transition"
             aria-label="Alternar modo de color"
           >
             {darkMode ? "☀️ Modo Claro" : "🌙 Modo Oscuro"}
