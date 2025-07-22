@@ -61,4 +61,61 @@ input:checked + .slider::before {
   color: white;
 }
 
+/* index.css o global.css */
 
+html.contrast {
+  filter: contrast(1.8);
+}
+
+html.blur {
+  filter: blur(1.5px);
+}
+
+html.grayscale {
+  filter: grayscale(1);
+}
+
+html.text-lg {
+  font-size: 120%;
+}
+
+html.letter-space * {
+  letter-spacing: 0.12em !important;
+}
+
+html.no-animations * {
+  animation: none !important;
+  transition: none !important;
+}
+
+html.dyslexia-font {
+  font-family: 'OpenDyslexic', 'Comic Sans MS', Arial, sans-serif !important;
+}
+
+html.highlight-links a {
+  outline: 2px dashed #000;
+  text-decoration: underline !important;
+  background: #ffffaa;
+  color: #000 !important;
+}
+
+html.hide-images img,
+html.hide-images [style*="background-image"] {
+  display: none !important;
+}
+
+html.line-height * {
+  line-height: 1.8 !important;
+}
+
+.daltonismo-deuteranopia {
+  filter: grayscale(0.4) contrast(1.2) saturate(0.6);
+}
+
+.daltonismo-protanopia {
+  filter: grayscale(0.5) contrast(1.1) saturate(0.5) hue-rotate(-20deg);
+}
+
+.daltonismo-tritanopia {
+  filter: grayscale(0.5) contrast(1.1) saturate(0.5) hue-rotate(90deg);
+}

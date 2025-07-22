@@ -56,7 +56,7 @@ export function getWeatherMessage(weatherData) {
     return "Hace frío de verdad. Gorrito, bufanda y ganas de abrazar. Ideal para caminatas rápidas y refugios cálidos.";
   }
 
-  if (temp < 5) {
+  if (temp < -50) {
     return "Frío polar 🧊. Abrigate bien, con varias capas. Y si podés quedarte en casa, mejor.";
   }
 

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { AccessibilityMenu } from "./AccessibilityMenu";
 
 export default function Header({
   darkMode,
@@ -9,7 +10,7 @@ export default function Header({
   setMenuOpen,
 }) {
   return (
-    <header className="sticky top-0 bg-[#1f1d4a]/80 dark:bg-[#0f0f2f]/80 backdrop-blur-md z-40 border-b border-white/10 dark:border-white/20">
+<header className="fixed top-0 left-0 right-0 bg-[#1f1d4a]/80 dark:bg-[#0f0f2f]/80 backdrop-blur-md z-50 border-b border-white/10 dark:border-white/20">
       <div className="flex justify-between items-center p-4 max-w-7xl mx-auto">
         <h1 className="text-xl md:text-2xl font-bold tracking-tight">
           <Link to="/" className="hover:underline transition">
@@ -47,6 +48,7 @@ export default function Header({
               <span className="icon moon">🌙</span>
             </span>
           </label>
+          <AccessibilityMenu />
 
           <Link
             to="/about"

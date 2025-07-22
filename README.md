@@ -17,12 +17,41 @@ Una aplicación moderna construida con **React** que permite visualizar el clima
 - 📅 **Pronóstico extendido (estático por ahora)** para los próximos días.
 - 🌈 **Estética moderna** con degradados, sombras suaves, y soporte para dispositivos móviles.
 
+♿ Accesibilidad y Buenas Prácticas WCAG
+Este proyecto incorpora buenas prácticas de accesibilidad basadas en las pautas WCAG para hacer la experiencia más inclusiva para personas con diferentes necesidades visuales y de interacción.
+
+Funcionalidades de accesibilidad implementadas
+Contraste aumentado para mejor lectura.
+
+- Filtros para simulación de daltonismo (Deuteranopía, Protanopía, Tritanopía) para usuarios con dificultad para distinguir colores.
+
+- Opciones visuales para astigmatismo, texto grande, espaciado de texto y altura de línea, facilitando la lectura.
+
+- Detención de animaciones para personas sensibles a movimientos.
+
+- Lectura automática del texto visible en pantalla mediante síntesis de voz (speechSynthesis).
+
+- Resaltado de enlaces y ocultado de imágenes para usuarios con necesidades específicas.
+
+- Persistencia de las opciones seleccionadas usando localStorage para mantener configuraciones entre sesiones.
+
+- Menú accesible y fácil de usar para activar o desactivar estas opciones en cualquier momento.
+
+
 ## 🚀 Tecnologías
 
 - [React](https://reactjs.org/)
 - [ReacRouterDoom](https://www.npmjs.com/package/react-router-dom)
 - [Tailwind CSS](https://tailwindcss.com/)
 - [OpenWeatherMap API](https://openweathermap.org/api)
+
+- Uso de React con hooks personalizados para manejar las opciones de accesibilidad.
+
+- Aplicación dinámica de clases CSS para activar filtros y estilos.
+
+- Uso de filtros CSS para simular condiciones de daltonismo sin necesidad de SVG externos.
+
+- Sintetizador de voz nativo del navegador para lectura de texto.
 
 ## 🧑‍💻 Instalación
 
