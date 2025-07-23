@@ -123,15 +123,22 @@ const Home = () => {
             </div>
           </section>
 
-          {/* Sobre el proyecto */}
-          <section id="about" className="max-w-3xl mx-auto text-center px-4">
-            <h3 className="text-3xl font-semibold mb-6">Sobre el proyecto</h3>
-            <p className="opacity-80">
-              Esta app fue construida con React y Tailwind CSS utilizando la API
-              de OpenWeatherMap. El objetivo es brindar una forma visual, rápida
-              y accesible de consultar el clima desde cualquier parte del mundo.
-            </p>
-          </section>
+          {/* Números de ayuda - Córdoba */}
+<section id="emergency-numbers" className="max-w-3xl mx-auto text-center px-4">
+  <h3 className="text-3xl font-semibold mb-6">Números de ayuda - Córdoba</h3>
+  <p className="opacity-80 mb-4">
+    Si estás en una situación de emergencia en la provincia de Córdoba, Argentina, podés comunicarte con los siguientes servicios:
+  </p>
+  <ul className="text-left inline-block mx-auto opacity-90 space-y-2">
+    <li><strong>Policía:</strong> 911</li>
+    <li><strong>Bomberos:</strong> 100</li>
+    <li><strong>Ambulancias (Emergencias médicas):</strong> 107</li>
+    <li><strong>Defensa Civil Córdoba:</strong> (0351) 103</li>
+    <li><strong>Violencia de género (línea nacional):</strong> 144</li>
+    <li><strong>Atención al Suicida (Centro Asistencial Vida):</strong> (0351) 426-5131 / 135 (línea gratuita desde teléfono fijo)</li>
+  </ul>
+</section>
+
         </main>
 
         {/* Footer semántico */}
