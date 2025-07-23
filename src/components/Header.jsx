@@ -10,7 +10,7 @@ export default function Header({
   setMenuOpen,
 }) {
   return (
-<header className="fixed top-0 left-0 right-0 bg-[#1f1d4a]/80 dark:bg-[#0f0f2f]/80 backdrop-blur-md z-50 border-b border-white/10 dark:border-white/20">
+    <header className="fixed top-0 left-0 right-0 bg-[#1f1d4a]/80 dark:bg-[#0f0f2f]/80 backdrop-blur-md z-50 border-b border-white/10 dark:border-white/20">
       <div className="flex justify-between items-center p-4 max-w-7xl mx-auto">
         <h1 className="text-xl md:text-2xl font-bold tracking-tight">
           <Link to="/" className="hover:underline transition">
@@ -34,6 +34,8 @@ export default function Header({
           className="hidden md:flex gap-6 text-sm font-medium items-center"
           aria-label="Menú principal"
         >
+          <AccessibilityMenu />
+
           <label className="switch" htmlFor="modo-desktop">
             <span className="sr-only">Alternar modo oscuro</span>
             <input
@@ -48,7 +50,6 @@ export default function Header({
               <span className="icon moon">🌙</span>
             </span>
           </label>
-          <AccessibilityMenu />
 
           <Link
             to="/about"
@@ -66,6 +67,8 @@ export default function Header({
           className="md:hidden px-6 py-4 bg-[#1f1d4a]/90 dark:bg-[#0f0f2f]/90 text-white flex flex-col gap-4 border-t border-white/10 dark:border-white/20"
           aria-label="Menú móvil"
         >
+          <AccessibilityMenu />
+
           <button
             onClick={toggleDarkMode}
             className="aria-hidden:true px-4 py-2 rounded-full font-semibold bg-white text-black hover:bg-gray-200 dark:bg-black dark:text-white dark:hover:bg-gray-800 transition"

@@ -26,7 +26,7 @@ export const AccessibilityMenu = () => {
     <div className="relative z-50">
       <button
         onClick={() => setShowMenu(!showMenu)}
-        className="text-white p-2 rounded-full bg-gray-700 hover:bg-gray-600 focus:outline-none"
+        className="text-white pl-2 pr-2 rounded-full bg-white hover:bg-gray-600 focus:outline-none"
         aria-label="Accesibilidad"
       >
         👤
