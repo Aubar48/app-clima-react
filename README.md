@@ -2,22 +2,22 @@
 
 Una aplicación moderna construida con **React** que permite visualizar el clima actual de cualquier ciudad del mundo en tiempo real, utilizando la API de **OpenWeatherMap**. El diseño es responsivo y atractivo, con animaciones y detalles visuales inspirados en aplicaciones móviles actuales.
 
-## 📷 Captura de pantalla
+## Captura de pantalla
 <picture><img src="./public/app-clima.png" alt="logo" style="height: 250px;"></picture>
 
-## ✨ Características
+##  Características
 
-- 🔍 **Búsqueda por ciudad**: permite consultar el clima de cualquier ciudad ingresada.
-- 📍 **Selección en mapa (en desarrollo)**: planeado para elegir ubicaciones directamente desde un mapa interactivo (proximamente).
-- 📆 **Información detallada**:
+-  **Búsqueda por ciudad**: permite consultar el clima de cualquier ciudad ingresada.
+-  **Selección en mapa (en desarrollo)**: planeado para elegir ubicaciones directamente desde un mapa interactivo (proximamente).
+-  **Información detallada**:
   - Temperatura actual en °C
   - Humedad y velocidad del viento
   - Horas de amanecer y atardecer
   - Duración del día
-- 📅 **Pronóstico extendido (estático por ahora)** para los próximos días.
-- 🌈 **Estética moderna** con degradados, sombras suaves, y soporte para dispositivos móviles.
+-  **Pronóstico extendido (estático por ahora)** para los próximos días.
+-  **Estética moderna** con degradados, sombras suaves, y soporte para dispositivos móviles.
 
-♿ Accesibilidad y Buenas Prácticas WCAG
+Accesibilidad y Buenas Prácticas WCAG
 Este proyecto incorpora buenas prácticas de accesibilidad basadas en las pautas WCAG para hacer la experiencia más inclusiva para personas con diferentes necesidades visuales y de interacción.
 
 Funcionalidades de accesibilidad implementadas
@@ -38,7 +38,7 @@ Contraste aumentado para mejor lectura.
 - Menú accesible y fácil de usar para activar o desactivar estas opciones en cualquier momento.
 
 
-## 🚀 Tecnologías
+##  Tecnologías
 
 - [React](https://reactjs.org/)
 - [ReacRouterDoom](https://www.npmjs.com/package/react-router-dom)
@@ -53,7 +53,7 @@ Contraste aumentado para mejor lectura.
 
 - Sintetizador de voz nativo del navegador para lectura de texto.
 
-## 🧑‍💻 Instalación
+## Instalación
 
 #### clona el repositorio
 - git clone https://github.com/Aubar48/app-clima-react
@@ -68,8 +68,8 @@ Contraste aumentado para mejor lectura.
 - Abre en el navegador de forma local: http://localhost:5173
 - Ver online: https://appclimanahuel.netlify.app/
 
-## 🗺️ Próximas mejoras
-- 🧭 Búsqueda geográfica con mapa interactivo (leaflet o Mapbox).
+## Próximas mejoras
+-  Búsqueda geográfica con mapa interactivo (leaflet o Mapbox).
 
 
 
